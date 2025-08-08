@@ -46,11 +46,16 @@ int main() {
     int miArray2[5] = {1,11,3,4,5};
     std::cout << miArray2 << std::endl;
 
-    int valor = 10;
+    miArray2[1] = 123;
+
+    int valor = 0;
     funcValorCopia(valor);
 
-    int referencia = 10;
+    int referencia = 0;
     funcValorRef(referencia);
+
+    int p = 0;
+    funcValorPuntero(&p);
 
     return 0;
 }

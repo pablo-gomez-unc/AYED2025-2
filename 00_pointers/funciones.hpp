@@ -7,5 +7,7 @@
 
 void funcValorRef(int& a);
 void funcValorCopia(int a);
+void funcValorPuntero(int* a);
+
 
 #endif //FUNCIONES_HPP
