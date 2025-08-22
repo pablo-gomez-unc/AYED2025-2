@@ -36,6 +36,7 @@ public:
     virtual void mostrarInformacion() {
         std::cout << "Nombre: " << nombre << std::endl;
         std::cout << "Precio: " << precio << std::endl;
+// Como hacemos para mostrar el nombre del valor del enumerado ? 
         std::cout << "Tipo item: " << static_cast<int>(tipo) << std::endl;
     }
 };
@@ -45,6 +46,7 @@ class Arma : public Item {
 public:
     Arma(const std::string& nombre, double precio, int danio) : Item(nombre, precio, TipoItem::Arma), danio(danio) {}
     void mostrarInformacion() override {
+        // Como hacemos para mostrar también los datos de los campos de la superclase? 
         std::cout << "Danio: " << danio << std::endl;
     }
 };
@@ -54,7 +56,7 @@ class Pocion : public Item {
 public:
     Pocion(const std::string& nombre, double precio, int curacion) : Item(nombre, precio, TipoItem::Pocion), curacion(curacion) {}
     void mostrarInformacion() override {
-        // 
+        // Como hacemos para mostrar también los datos de los campos de la superclase? 
         std::cout << "Curacion: " << curacion << std::endl;
     }
 };
