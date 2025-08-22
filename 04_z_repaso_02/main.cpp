@@ -6,9 +6,30 @@
 // Implementar una función que, utilizando punteros, actualice el salario de un empleado basándose en su ID. 
 // Esto simula un aumento de sueldo. 💰
 // Implementar una segunda función que imprima los datos de un empleado, también usando punteros.
+#include <iostream>
+#include <string>
 
+struct Empleado {
+    std::string nombre;
+    int id;
+    double* getPtrSalario () {
+        return &salario;
+    };
+    void printDatos () {
+        std::cout << "Empleado id: "    << id 
+                  << " nombre: "        << nombre 
+                  << " salario: "       << salario << std::endl;
+    }
+    Empleado (std::string nombre, int id, double salario) : nombre(nombre), id(id), salario(salario) {};
+private:
+    double salario;
+};
 
 int main() {
-
+    Empleado e1 = Empleado("el mejor empleado", 1, 1000);
+    e1.printDatos();
+    double* salario = e1.getPtrSalario();
+    *salario = 10000000;
+    e1.printDatos();
     return 0;
 }

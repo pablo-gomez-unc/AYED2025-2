@@ -7,9 +7,9 @@ void dibujarForma (const Forma& f) {
 
 int main() {
     Forma f;
-    f.dibujar();
+    //f.dibujar();
     Circulo c;
-    c.dibujar();
+    //c.dibujar();
 
     dibujarForma(f);
     dibujarForma(c);

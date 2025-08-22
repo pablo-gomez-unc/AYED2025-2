@@ -36,12 +36,38 @@ public:
     virtual void mostrarInformacion() {
         std::cout << "Nombre: " << nombre << std::endl;
         std::cout << "Precio: " << precio << std::endl;
+        std::cout << "Tipo item: " << static_cast<int>(tipo) << std::endl;
+    }
+};
 
+class Arma : public Item {
+    int danio;
+public:
+    Arma(const std::string& nombre, double precio, int danio) : Item(nombre, precio, TipoItem::Arma), danio(danio) {}
+    void mostrarInformacion() override {
+        std::cout << "Danio: " << danio << std::endl;
+    }
+};
+
+class Pocion : public Item {
+    int curacion;
+public:
+    Pocion(const std::string& nombre, double precio, int curacion) : Item(nombre, precio, TipoItem::Pocion), curacion(curacion) {}
+    void mostrarInformacion() override {
+        // 
+        std::cout << "Curacion: " << curacion << std::endl;
     }
 };
 
 int main() {
-    Item *i1 = new Item("nomrbre", 1.23, TipoItem::Gema);
-    std::cout << "hello" ;
+    Item *i1 = new Item("nombre", 1.23, TipoItem::Gema);
+    Item *i2 = new Arma("elArma", 10000, 10);
+    Item *i3 = new Pocion("laPocion", 10000000, 20);
+
+    i1->mostrarInformacion();
+    std::cout << std::endl;
+    std::cout << std::endl;
+    i3->mostrarInformacion();
+
     return 0;
 }
