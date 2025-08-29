@@ -23,6 +23,21 @@ enum class TipoItem {
     Gema
 };
 
+std::string tipoItemToString (TipoItem tipoItem) {
+    switch (tipoItem) {
+        case TipoItem::Arma:
+            return "Arma";
+        case TipoItem::Armadura:
+            return "Armadura";
+        case TipoItem::Pocion:
+            return "Pocion";
+        case TipoItem::Gema:
+            return "Gema";
+        default:
+            return "Tipo de item desconocido";
+    }
+}
+
 class Item {
 protected:
     std::string nombre;
@@ -38,6 +53,7 @@ public:
         std::cout << "Precio: " << precio << std::endl;
 // Como hacemos para mostrar el nombre del valor del enumerado ? 
         std::cout << "Tipo item: " << static_cast<int>(tipo) << std::endl;
+        std::cout << "Tipo item: " << tipoItemToString(tipo) << std::endl;
     }
 };
 
@@ -47,6 +63,7 @@ public:
     Arma(const std::string& nombre, double precio, int danio) : Item(nombre, precio, TipoItem::Arma), danio(danio) {}
     void mostrarInformacion() override {
         // Como hacemos para mostrar también los datos de los campos de la superclase? 
+        Item::mostrarInformacion();
         std::cout << "Danio: " << danio << std::endl;
     }
 };
@@ -57,6 +74,7 @@ public:
     Pocion(const std::string& nombre, double precio, int curacion) : Item(nombre, precio, TipoItem::Pocion), curacion(curacion) {}
     void mostrarInformacion() override {
         // Como hacemos para mostrar también los datos de los campos de la superclase? 
+        Item::mostrarInformacion();
         std::cout << "Curacion: " << curacion << std::endl;
     }
 };
