@@ -1,6 +1,7 @@
 /.idea/
 /cmake-build-debug/
-build/
+/build/
+/13_parentesis/
 .vscode/
 .vscode/tasks.json
 .DS_Store

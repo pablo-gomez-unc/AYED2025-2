@@ -1,1 +1,1 @@
-add_executable(06_recursion main.cpp functions.hpp functions.cpp)
+add_executable(recursion main.cpp functions.hpp functions.cpp)
