@@ -13,7 +13,7 @@
 // Mantén un límite para la cantidad de acciones que se pueden "deshacer" para evitar un consumo excesivo de memoria.
 struct Producto
 {
-    int precio;
+    int precio; //  centavos
     std::string identificador;
 };
 
