@@ -5,7 +5,7 @@
 #ifndef VIRTUAL_CIRCULO_H
 #define VIRTUAL_CIRCULO_H
 
-#include "Forma.h"
+#include "Forma.hpp"
 
 class Circulo : public Forma {
 public:

@@ -1,5 +1,5 @@
-#include "Forma.h"
-#include "Circulo.h"
+#include "Forma.hpp"
+#include "Circulo.hpp"
 
 void dibujarForma (const Forma& f) {
     f.dibujar();
