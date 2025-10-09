@@ -4,3 +4,4 @@
 .vscode/
 .vscode/tasks.json
 .DS_Store
+**/doc/
