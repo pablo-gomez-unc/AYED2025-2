@@ -15,6 +15,14 @@ void imprimirVector(const std::vector<int>& arr) {
     std::cout << "\n";
 }
 
+/**
+ * @brief 
+ * 
+ * @param arr 
+ * @param low 
+ * @param high 
+ * @return int 
+ */
 int particion(std::vector<int>& arr, int low, int high) {
     int pivot = arr[high];
     int i = (low - 1);
@@ -30,12 +38,12 @@ int particion(std::vector<int>& arr, int low, int high) {
 }
 
 void quickSort(std::vector<int>& arr, int low, int high) {
-    if (low < high) {
-        int pi = particion(arr, low, high);
-
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+    if (low >= high) {
+        return;
     }
+    int pi = particion(arr, low, high);
+    quickSort(arr, low, pi - 1);
+    quickSort(arr, pi + 1, high);
 }
 
 int main() {

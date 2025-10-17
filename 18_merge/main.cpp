@@ -11,7 +11,9 @@ void imprimir (int* arr, int n) {
 void merge(int* arr, int inicio, int medio, int final) {
     int* ordenado = new int[final - inicio + 1];
 
-    int i = inicio, j = medio+1, k = 0;
+    int i = inicio;
+    int j = medio+1; 
+    int k = 0;
     while ( i < medio+1 && j < final+1 ) {
         if (arr[i] < arr[j]) {
             ordenado[k++] = arr[i++];
@@ -25,6 +27,7 @@ void merge(int* arr, int inicio, int medio, int final) {
     while (j < final+1) {
         ordenado[k++] = arr[j++];
     };
+
     for (int i = 0; i < final+1; i++) {
         arr[inicio+i] = ordenado[i];
     }
@@ -36,12 +39,12 @@ void merge_sort (int* arr, int i, int f) {
     if (i >= f) return;
 
     int medio = i + (f - i) / 2;
-    imprimir(arr+i, medio-i+1);
+    //imprimir(arr+i, medio-i+1);
     merge_sort (arr, i, medio);
-    imprimir(arr+medio+1, f-medio);
+    //imprimir(arr+medio+1, f-medio);
     merge_sort (arr, medio+1, f);
     merge (arr, i, medio, f);
-    imprimir(arr, f-i+1);
+    //imprimir(arr, f-i+1);
 }
 
 int main() {
@@ -55,3 +58,19 @@ int main() {
 
     return 0;
 }
+
+// 1, 2, 3 , 4, 5, 6 ,7 ,8                    n = 8 
+// 1,2,3,4.     5,6,7,8.                      n/2
+// 1,2.        3,4.      5,6.    7,8.         n/4
+// 1    2.     3.    4     5.  6.    7.  8    n/8
+
+// 1,2,3,4.          n=4
+// 1,2.   3,4.       n/2 
+// 1.   2.   3.   4. n/4 
+
+// log2 (1000000) = 20
+// log2 (8) = 3
+// log2 (4) = 2
+// log2 (2) = 1
+// log2 (1)
+// n log (n)   
