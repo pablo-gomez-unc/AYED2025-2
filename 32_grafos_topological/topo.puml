@@ -1,0 +1,32 @@
+@startuml Vestirse
+title Grafo de Dependencias para Vestirse
+
+node "Ropa Interior" as RI
+node "Medias" as MED
+node "Pantalones" as PAN
+node "Camisa" as CAM
+node "Zapatos" as ZAP
+node "Cinturón" as CIN
+node "Corbata" as COR
+node "Reloj" as REL
+node "Abrigo" as ABR
+
+RI --> PAN
+RI --> CAM
+
+MED --> ZAP
+
+PAN --> ZAP
+PAN --> CIN
+PAN --> ABR
+
+CAM --> CIN
+CAM --> COR
+CAM --> REL
+CAM --> ABR
+
+COR --> ABR
+
+REL --> ABR
+
+@enduml

@@ -7,7 +7,15 @@ void swap(int& a, int& b) {
     b = temp;
 }
 
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; ++i)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
 void heapify(int arr[], int n, int i) {
+    printArray(arr, n);
+
     int largest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
@@ -29,19 +37,14 @@ void heapsort(int arr[], int n) {
         heapify(arr, n, i);
 
     for (int i = n - 1; i >= 0; i--) {
+        printArray(arr, n);
         swap(arr[0], arr[i]);
         heapify(arr, i, 0);
     }
 }
 
-void printArray(int arr[], int n) {
-    for (int i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
 int main() {
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
+    int arr[] = { 60, 3, 11, 2, 70, 20 };
     int n = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Arreglo original: ";

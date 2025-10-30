@@ -1,1 +1,1 @@
-add_executable(quick main.cpp)
+add_executable(19_quick main.cpp)

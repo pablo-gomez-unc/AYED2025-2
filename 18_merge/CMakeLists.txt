@@ -1,1 +1,1 @@
-add_executable(merge main.cpp)
+add_executable(18_merge main.cpp)

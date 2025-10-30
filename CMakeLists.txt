@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.30)
 project(ayed)
 
+find_program(CLANGTIDY clang-tidy)
+if(CLANGTIDY)
+    set(CMAKE_CXX_CLANG_TIDY ${CLANGTIDY})
+endif()
+
 set(CMAKE_CXX_STANDARD 20)
 
 include(FetchContent)
