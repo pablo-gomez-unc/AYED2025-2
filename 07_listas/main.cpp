@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de listas enlazadas
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "nodo.hpp"
 #include "lista.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Listas 2025" << std::endl;
 

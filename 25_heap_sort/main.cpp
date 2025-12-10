@@ -1,18 +1,40 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el algoritmo de ordenamiento Heap Sort
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief Intercambia dos valores enteros
+ * @param a Primer valor
+ * @param b Segundo valor
+ */
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
     b = temp;
 }
 
+/**
+ * @brief Imprime los elementos de un array
+ * @param arr Array a imprimir
+ * @param n Tamaño del array
+ */
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; ++i)
         cout << arr[i] << " ";
     cout << endl;
 }
 
+/**
+ * @brief Mantiene la propiedad de heap en un subárbol
+ * @param arr Array que representa el heap
+ * @param n Tamaño del heap
+ * @param i Índice del nodo raíz del subárbol
+ */
 void heapify(int arr[], int n, int i) {
     printArray(arr, n);
 

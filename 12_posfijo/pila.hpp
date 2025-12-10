@@ -1,6 +1,9 @@
-//
-// Created by Roberto Pablo Gomez on 26/03/2025.
-//
+/**
+ * @file pila.hpp
+ * @brief Definición de la clase Pila genérica con método tope()
+ * @author Roberto Pablo Gomez
+ * @date 26/03/2025
+ */
 
 #ifndef LISTAS_PILA_HPP
 #define LISTAS_PILA_HPP
@@ -8,6 +11,11 @@
 #include <iostream>
 #include "nodo.hpp"
 
+/**
+ * @class Pila
+ * @brief Clase genérica que representa una pila (estructura LIFO) con método tope()
+ * @tparam T Tipo de dato almacenado en la pila
+ */
 template <typename T>
 class Pila {
 public:

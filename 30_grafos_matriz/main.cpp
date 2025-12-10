@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra grafos implementados con matriz de adyacencia
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <iomanip> 
 
+/**
+ * @class Grafo
+ * @brief Clase que representa un grafo usando matriz de adyacencia
+ */
 class Grafo {
 private:
     std::vector<std::vector<int>> matrizAdj;

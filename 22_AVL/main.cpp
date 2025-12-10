@@ -1,18 +1,42 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de árboles AVL (auto-balanceados)
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <string>
 
+/**
+ * @struct Nodo
+ * @brief Estructura que representa un nodo en un árbol AVL
+ */
 struct Nodo {
     int valor;
     Nodo* izq;
     Nodo* der;
-    int altura;
+    int altura;  ///< Altura del nodo en el árbol
+    /**
+     * @brief Constructor del nodo
+     * @param v Valor a almacenar
+     */
     Nodo(int v) : valor(v), izq(nullptr), der(nullptr), altura(1) {}
 };
 
+/**
+ * @brief Obtiene el máximo entre dos enteros
+ * @param a Primer valor
+ * @param b Segundo valor
+ * @return El mayor de los dos valores
+ */
 int max(int a , int b) {
     return a > b ? a : b;
 }
 
+/**
+ * @class AVL
+ * @brief Clase que representa un árbol AVL (auto-balanceado)
+ */
 class AVL {
 private:
     Nodo* raiz = nullptr;

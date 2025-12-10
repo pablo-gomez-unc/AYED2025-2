@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Ejercicio de repaso: Sistema de carrito de compras con deshacer/rehacer
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "carrito.hpp"
 #include "producto.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main()
 {
     Producto p1{1000, "P1"};

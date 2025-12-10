@@ -1,3 +1,9 @@
+/**
+ * @file carrito.hpp
+ * @brief Definición de la clase Carrito con funcionalidad de deshacer/rehacer
+ * @author Roberto Pablo Gomez
+ */
+
 #ifndef CARRITO_HPP
 #define CARRITO_HPP
 
@@ -6,20 +12,42 @@
 #include <stack>
 #include <string>
 
+/**
+ * @class Carrito
+ * @brief Clase que representa un carrito de compras con funcionalidad de deshacer/rehacer
+ */
 class Carrito
 {
 public:
+    /**
+     * @brief Agrega un producto al carrito
+     * @param p Producto a agregar
+     */
     void agregarProducto(const Producto& p);
+    /**
+     * @brief Remueve un producto del carrito
+     * @param p Producto a remover
+     */
     void removerProducto(const Producto& p);
+    /**
+     * @brief Deshace la última operación realizada
+     */
     void deshacerOperacion();
+    /**
+     * @brief Rehace la última operación deshecha
+     */
     void rehacerOperacion();
 
+    /**
+     * @brief Obtiene la lista de productos en el carrito
+     * @return Referencia constante a la lista de productos
+     */
     const std::list<Producto>& getProductos() const;
 
 private:
-    std::list<Producto> carrito;
-    std::stack<std::pair<Producto, std::string>> rehacer;
-    std::stack<std::pair<Producto, std::string>> deshacer;
+    std::list<Producto> carrito;  ///< Lista de productos en el carrito
+    std::stack<std::pair<Producto, std::string>> rehacer;  ///< Pila de operaciones para rehacer
+    std::stack<std::pair<Producto, std::string>> deshacer;  ///< Pila de operaciones para deshacer
 };
 
 #include "carrito.hpp"

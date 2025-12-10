@@ -1,7 +1,18 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que verifica el balanceo de paréntesis, corchetes y llaves
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "pila.hpp"
 #include "lista.hpp"
 
+/**
+ * @brief Procesa un carácter para verificar el balanceo de la expresión
+ * @param p Puntero a la pila de caracteres
+ * @param actual Carácter actual a procesar
+ */
 void procesar(Pila<char>* p, char actual){
     if (actual == '}' ||  actual == ']' || actual == ')'  ) {
         char anterior = p->desapilar();
@@ -17,6 +28,10 @@ void procesar(Pila<char>* p, char actual){
     p->apilar(actual);
 }
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Parentesis 2025" << std::endl;
     auto *l = new Lista<char>();

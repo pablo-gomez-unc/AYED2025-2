@@ -1,10 +1,22 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra algoritmos para encontrar el árbol de expansión mínima (MST)
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <climits>
 
-#define PRIM_V 4
+#define PRIM_V 4  ///< Número de vértices para el algoritmo de Prim
 
+/**
+ * @brief Encuentra el vértice con la clave mínima que no está en el MST
+ * @param key Vector de claves
+ * @param mstSet Vector que indica qué vértices están en el MST
+ * @return Índice del vértice con clave mínima
+ */
 int minKey(const std::vector<int>& key, const std::vector<bool>& mstSet) {
     int min_val = INT_MAX, min_index = -1;
     for (int v = 0; v < PRIM_V; v++) {
@@ -16,6 +28,10 @@ int minKey(const std::vector<int>& key, const std::vector<bool>& mstSet) {
     return min_index;
 }
 
+/**
+ * @brief Implementa el algoritmo de Prim para encontrar el MST
+ * @param graph Matriz de adyacencia que representa el grafo
+ */
 void primMST(const std::vector<std::vector<int>>& graph) {
     std::vector<int> parent(PRIM_V);
     std::vector<int> key(PRIM_V);

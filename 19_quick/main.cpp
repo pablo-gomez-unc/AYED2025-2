@@ -16,12 +16,11 @@ void imprimirVector(const std::vector<int>& arr) {
 }
 
 /**
- * @brief 
- * 
- * @param arr 
- * @param low 
- * @param high 
- * @return int 
+ * @brief Particiona el array alrededor de un pivote
+ * @param arr Vector a particionar
+ * @param low Índice inicial
+ * @param high Índice final
+ * @return Índice del pivote después de la partición
  */
 int particion(std::vector<int>& arr, int low, int high) {
     int pivot = arr[high];
@@ -37,6 +36,12 @@ int particion(std::vector<int>& arr, int low, int high) {
     return (i + 1); 
 }
 
+/**
+ * @brief Ordena un vector usando el algoritmo Quick Sort
+ * @param arr Vector a ordenar
+ * @param low Índice inicial
+ * @param high Índice final
+ */
 void quickSort(std::vector<int>& arr, int low, int high) {
     if (low >= high) {
         return;
@@ -46,6 +51,10 @@ void quickSort(std::vector<int>& arr, int low, int high) {
     quickSort(arr, pi + 1, high);
 }
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::vector<int> datos = {10, 7, 8, 9, 1, 5};
     int n = datos.size();

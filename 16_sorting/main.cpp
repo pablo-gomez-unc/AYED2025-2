@@ -1,6 +1,16 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra los algoritmos de ordenamiento
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "sorting.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "2025 - Ordenamiento parte 1" << std::endl;
 

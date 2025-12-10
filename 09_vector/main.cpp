@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de std::vector
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <string>
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::vector<std::string> lista;
     lista.push_back("dato1");

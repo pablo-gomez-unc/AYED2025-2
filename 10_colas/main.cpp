@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de pilas y colas
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "cola.hpp"
 #include "pila.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Pilas 2025" << std::endl;
     auto *p = new Pila<int>();

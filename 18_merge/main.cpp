@@ -1,5 +1,16 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el algoritmo de ordenamiento Merge Sort
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 
+/**
+ * @brief Imprime los elementos de un array
+ * @param arr Array a imprimir
+ * @param n Tamaño del array
+ */
 void imprimir (int* arr, int n) {
     std::cout << " | ";
     for (int i = 0; i < n; i++) {
@@ -8,6 +19,13 @@ void imprimir (int* arr, int n) {
     std::cout << std::endl;
 }
 
+/**
+ * @brief Fusiona dos subarrays ordenados
+ * @param arr Array completo
+ * @param inicio Índice de inicio
+ * @param medio Índice medio
+ * @param final Índice final
+ */
 void merge(int* arr, int inicio, int medio, int final) {
     int* ordenado = new int[final - inicio + 1];
 
@@ -35,6 +53,12 @@ void merge(int* arr, int inicio, int medio, int final) {
     delete [] ordenado;
 }
 
+/**
+ * @brief Ordena un array usando el algoritmo Merge Sort
+ * @param arr Array a ordenar
+ * @param i Índice inicial
+ * @param f Índice final
+ */
 void merge_sort (int* arr, int i, int f) {
     if (i >= f) return;
 
@@ -47,6 +71,10 @@ void merge_sort (int* arr, int i, int f) {
     //imprimir(arr, f-i+1);
 }
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Merge 2025" << std::endl;
     int arr[] = {66, 11, 2, 3, 44};

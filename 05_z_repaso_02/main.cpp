@@ -1,30 +1,50 @@
-// Eres el ingeniero de software principal en 'TechSolutions'. Tu tarea es desarrollar un módulo para gestionar 
-// la información de los empleados. La empresa te ha pedido que uses punteros para optimizar el acceso a los 
-// datos y la memoria. Necesitas:
+/**
+ * @file main.cpp
+ * @brief Ejercicio de repaso: Sistema de gestión de empleados con punteros
+ * @details Implementa una estructura Empleado con métodos que usan punteros
+ * @author Roberto Pablo Gomez
+ */
 
-// Crear una struct llamada Empleado que contenga el nombre (std::string), el ID (int) y el salario (double).
-// Implementar una función que, utilizando punteros, actualice el salario de un empleado basándose en su ID. 
-// Esto simula un aumento de sueldo. 💰
-// Implementar una segunda función que imprima los datos de un empleado, también usando punteros.
 #include <iostream>
 #include <string>
 
+/**
+ * @struct Empleado
+ * @brief Estructura que representa un empleado con nombre, ID y salario
+ */
 struct Empleado {
-    std::string nombre;
-    int id;
+    std::string nombre;  ///< Nombre del empleado
+    int id;              ///< ID del empleado
+    /**
+     * @brief Obtiene un puntero al salario del empleado
+     * @return Puntero al salario
+     */
     double* getPtrSalario () {
         return &salario;
     };
+    /**
+     * @brief Imprime los datos del empleado
+     */
     void printDatos () {
         std::cout << "Empleado id: "    << id 
                   << " nombre: "        << nombre 
                   << " salario: "       << salario << std::endl;
     }
+    /**
+     * @brief Constructor de Empleado
+     * @param nombre Nombre del empleado
+     * @param id ID del empleado
+     * @param salario Salario del empleado
+     */
     Empleado (std::string nombre, int id, double salario) : nombre(nombre), id(id), salario(salario) {};
 private:
-    double salario;
+    double salario;  ///< Salario del empleado (privado)
 };
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     Empleado e1 = Empleado("el mejor empleado", 1, 1000);
     e1.printDatos();

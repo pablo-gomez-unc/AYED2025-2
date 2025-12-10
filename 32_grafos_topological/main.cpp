@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra ordenamiento topológico de grafos dirigidos
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <list>   
@@ -5,6 +11,10 @@
 #include <string>
 #include <vector>
 
+/**
+ * @class GrafoDirigido
+ * @brief Clase que representa un grafo dirigido con ordenamiento topológico
+ */
 class GrafoDirigido {
 public:
     int numNodes;

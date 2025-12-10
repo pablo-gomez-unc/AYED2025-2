@@ -1,10 +1,23 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el algoritmo de Dijkstra para caminos más cortos
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <queue>    
 #include <limits>   
 
-const int INF = std::numeric_limits<int>::max(); 
+const int INF = std::numeric_limits<int>::max();  ///< Valor que representa infinito
 
+/**
+ * @brief Implementa el algoritmo de Dijkstra para encontrar el camino más corto
+ * @param V Número de vértices
+ * @param adj Lista de adyacencia con pesos
+ * @param origen Vértice de origen
+ * @param destino Vértice de destino
+ */
 void dijkstra(int V, const std::vector<std::vector<std::pair<int, int>>>& adj, int origen, int destino) {
     std::vector<int> distancias(V, INF);
     std::priority_queue< std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<std::pair<int, int>> > pq;

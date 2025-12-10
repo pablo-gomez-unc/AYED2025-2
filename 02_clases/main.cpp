@@ -1,24 +1,56 @@
+/**
+ * @file main.cpp
+ * @brief Programa que demuestra el uso de clases en C++
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 
+/**
+ * @class Persona
+ * @brief Clase que representa una persona con edad y nombre públicos
+ */
 class Persona {
 public:
+    /**
+     * @brief Constructor por defecto
+     */
     Persona(): edad(0), nombre(std::string("hola")) {};
-    int edad;
-    std::string nombre;
+    int edad;            ///< Edad de la persona
+    std::string nombre; ///< Nombre de la persona
 };
 
+/**
+ * @class PersonaConst
+ * @brief Clase que representa una persona con miembros privados
+ */
 class PersonaConst {
 public:
+    /**
+     * @brief Constructor por defecto
+     */
     PersonaConst(): edad(0), nombre(std::string("")) {};
+    /**
+     * @brief Constructor con parámetros
+     * @param e Edad de la persona
+     * @param n Nombre de la persona
+     */
     PersonaConst(int e, std::string n): edad(e), nombre(n) {};
+    /**
+     * @brief Muestra la información de la persona
+     */
     void mostrar() {
       std::cout << edad << "  " << nombre << std::endl;
     };
 private:
-    int edad;
-    std::string nombre;
+    int edad;            ///< Edad de la persona
+    std::string nombre;  ///< Nombre de la persona
 };
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     Persona p;
     std::cout << p.edad << std::endl;

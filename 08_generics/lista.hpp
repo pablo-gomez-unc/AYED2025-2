@@ -1,25 +1,62 @@
-//
-// Created by Roberto Pablo Gomez on 26/03/2025.
-//
+/**
+ * @file lista.hpp
+ * @brief Definición de la clase Lista genérica (lista enlazada)
+ * @author Roberto Pablo Gomez
+ * @date 26/03/2025
+ */
 
 #ifndef LISTAS_LISTA_HPP
 #define LISTAS_LISTA_HPP
 
 #include "nodo.hpp"
 
+/**
+ * @class Lista
+ * @brief Clase genérica que representa una lista enlazada
+ * @tparam T Tipo de dato almacenado en la lista
+ */
 template <typename T>
 class Lista {
 public:
+    /**
+     * @brief Constructor por defecto (lista vacía)
+     */
     Lista ();
+    /**
+     * @brief Destructor que libera la memoria de todos los nodos
+     */
     ~Lista();
+    /**
+     * @brief Agrega un elemento al inicio de la lista
+     * @param d Dato a agregar
+     */
     void agregar (T d);
+    /**
+     * @brief Verifica si la lista está vacía
+     * @return true si la lista está vacía, false en caso contrario
+     */
     bool es_vacia ();
+    /**
+     * @brief Obtiene el dato del primer nodo
+     * @return Dato del primer nodo, o -1 si la lista está vacía
+     */
     int cabeza ();
+    /**
+     * @brief Obtiene una nueva lista con todos los elementos excepto el primero
+     * @return Puntero a una nueva Lista con el resto de elementos, o nullptr si está vacía
+     */
     Lista<T> *resto ();
+    /**
+     * @brief Imprime todos los elementos de la lista
+     */
     void imprimir();
 private:
+    /**
+     * @brief Constructor privado que inicializa la lista con un nodo
+     * @param n Puntero al nodo cabeza
+     */
     Lista (Nodo<T>* n);
-    Nodo<T> *comienzo;
+    Nodo<T> *comienzo;  ///< Puntero al primer nodo de la lista
 };
 
 

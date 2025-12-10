@@ -1,19 +1,19 @@
+/**
+ * @file main.cpp
+ * @brief Ejercicio de repaso: Reorganizar lista enlazada alternando inicio y final
+ * @details Implementa un algoritmo para reorganizar una lista enlazada simple
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 
 #include "lista.hpp"
 
-// Escribe un algoritmo para reorganizar una lista enlazada simple de forma
-// que los nodos se alternen desde el inicio y el final de la lista original.
-// Ejemplo: Si la lista es 1 -> 2 -> 3 -> 4 -> 5 -> 6,
-// el resultado debería ser 1 -> 6 -> 2 -> 5 -> 3 -> 4.
-// Proceso:
-//     - Encontrar el punto medio
-//     - Dividir la lista en dos   1 2 3      4 5 6
-//     - Invertir la segunda mitad 1 2 3      6 5 4
-//     - Fusionar las dos listas de manera alternada.   1 6 2 5 3 4
-
-
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     auto lista = Lista<int>();
     lista.agregar(6);

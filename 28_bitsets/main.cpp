@@ -1,9 +1,20 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de std::bitset
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <bitset>
 
-const int NUM_ASIENTOS = 100;
-std::bitset<NUM_ASIENTOS> asientosDisponibilidad;
+const int NUM_ASIENTOS = 100;  ///< Número total de asientos
+std::bitset<NUM_ASIENTOS> asientosDisponibilidad;  ///< Bitset que representa la disponibilidad de asientos
 
+/**
+ * @brief Imprime el estado de los asientos en un rango
+ * @param inicio Índice inicial
+ * @param fin Índice final
+ */
 void imprimirEstadoAsientos(int inicio, int fin) {
     std::cout << "Estado de asientos del " << inicio << " al " << fin << ":" << std::endl;
     for (int i = inicio; i <= fin; ++i) {
@@ -13,6 +24,10 @@ void imprimirEstadoAsientos(int inicio, int fin) {
     }
 }
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     bool asientosarray[NUM_ASIENTOS] = {};
     asientosarray[0] = true;

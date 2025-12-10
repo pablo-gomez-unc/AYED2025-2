@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra grafos implementados con lista de adyacencia
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <list> 
 
+/**
+ * @class GrafoLista
+ * @brief Clase que representa un grafo usando lista de adyacencia
+ */
 class GrafoLista {
 private:
     std::vector<std::list<int>> listaAdj;

@@ -1,6 +1,9 @@
-//
-// Created by Roberto Pablo Gomez on 26/03/2025.
-//
+/**
+ * @file lista.hpp
+ * @brief Definición de la clase Lista genérica con extensiones (agregar inicio/final, eliminar, etc.)
+ * @author Roberto Pablo Gomez
+ * @date 26/03/2025
+ */
 
 #ifndef LISTAS_LISTA_HPP
 #define LISTAS_LISTA_HPP
@@ -8,6 +11,11 @@
 #include <iostream>
 #include "nodo.hpp"
 
+/**
+ * @class Lista
+ * @brief Clase genérica que representa una lista enlazada con operaciones extendidas
+ * @tparam T Tipo de dato almacenado en la lista
+ */
 template <typename T>
 class Lista {
 public:

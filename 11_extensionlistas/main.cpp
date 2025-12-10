@@ -1,6 +1,16 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra extensiones de listas enlazadas
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include "lista.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Extension Listas 2025" << std::endl;
     auto *l = new Lista<int>();

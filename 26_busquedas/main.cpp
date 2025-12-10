@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que compara búsqueda lineal vs búsqueda binaria
+ * @author Roberto Pablo Gomez
+ */
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -5,6 +11,13 @@
 
 #include "perfomanceutils.hpp"
 
+/**
+ * @brief Realiza una búsqueda lineal en un vector
+ * @param data Vector donde buscar
+ * @param value Valor a buscar
+ * @param comparisons Contador de comparaciones realizadas
+ * @return true si se encuentra el valor, false en caso contrario
+ */
 bool linear_search(const std::vector<int>& data, int value, long long& comparisons) {
     comparisons = 0;
     for (int x : data) {
@@ -16,6 +29,13 @@ bool linear_search(const std::vector<int>& data, int value, long long& compariso
     return false;
 }
 
+/**
+ * @brief Realiza una búsqueda binaria en un vector ordenado
+ * @param data Vector ordenado donde buscar
+ * @param value Valor a buscar
+ * @param comparisons Contador de comparaciones realizadas
+ * @return true si se encuentra el valor, false en caso contrario
+ */
 bool binary_search_custom(const std::vector<int>& data, int value, long long& comparisons) {
     comparisons = 0;
     int low = 0;

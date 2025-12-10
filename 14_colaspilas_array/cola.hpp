@@ -1,12 +1,21 @@
-//
-// Created by Roberto Pablo Gomez on 26/03/2025.
-//
+/**
+ * @file cola.hpp
+ * @brief Definición de la clase Cola genérica implementada con array
+ * @author Roberto Pablo Gomez
+ * @date 26/03/2025
+ */
 
 #ifndef LISTAS_COLA_HPP
 #define LISTAS_COLA_HPP
 
 #include <iostream>
 
+/**
+ * @class Cola
+ * @brief Clase genérica que representa una cola (estructura FIFO) implementada con array
+ * @tparam T Tipo de dato almacenado en la cola
+ * @tparam N Tamaño máximo del array
+ */
 template <typename T, int N>
 class Cola {
 public:

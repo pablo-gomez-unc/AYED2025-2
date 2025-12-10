@@ -1,7 +1,17 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que evalúa expresiones en notación posfija
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <sstream>
 #include "pila.hpp"
 
+/**
+ * @brief Procesa operadores y operandos en la pila para evaluar expresiones posfijas
+ * @param p Puntero a la pila que contiene la expresión
+ */
 void procesar (Pila<std::string>* p) {
     if (p->tope() == "*" || p->tope() == "+" || p->tope() == "-" || p->tope() == "/"){
         std::string operador = p->desapilar();
@@ -24,6 +34,10 @@ void procesar (Pila<std::string>* p) {
     }
 }
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main() {
     std::cout << "Posfijo 2025" << std::endl;
     auto *p = new Pila<std::string>();

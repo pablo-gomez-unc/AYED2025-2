@@ -1,9 +1,19 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra recorridos BFS y DFS en grafos
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <stack>
 #include <iomanip> 
 
+/**
+ * @class Grafo
+ * @brief Clase que representa un grafo con métodos de recorrido BFS y DFS
+ */
 class Grafo {
 private:
     std::vector<std::vector<int>> matrizAdj;

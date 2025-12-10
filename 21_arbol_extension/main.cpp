@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra extensiones de árboles binarios (BFS, borrado, etc.)
+ * @author Roberto Pablo Gomez
+ */
 
 #include <cstdlib>
 #include <iostream>
@@ -7,6 +12,11 @@
 #include <functional>
 using namespace std;
 
+/**
+ * @class nodo
+ * @brief Clase que representa un nodo en un árbol binario
+ * @tparam T Tipo de dato almacenado en el nodo
+ */
 template <class T> class nodo {
 public:
     T info;

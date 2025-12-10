@@ -1,6 +1,9 @@
-//
-// Created by Roberto Pablo Gomez on 26/03/2025.
-//
+/**
+ * @file pila.hpp
+ * @brief Definición de la clase Pila genérica (estructura LIFO)
+ * @author Roberto Pablo Gomez
+ * @date 26/03/2025
+ */
 
 #ifndef LISTAS_PILA_HPP
 #define LISTAS_PILA_HPP
@@ -8,18 +11,48 @@
 #include <iostream>
 #include "nodo.hpp"
 
+/**
+ * @class Pila
+ * @brief Clase genérica que representa una pila (estructura LIFO)
+ * @tparam T Tipo de dato almacenado en la pila
+ */
 template <typename T>
 class Pila {
 public:
+    /**
+     * @brief Constructor por defecto (pila vacía)
+     */
     Pila ();
+    /**
+     * @brief Destructor que libera la memoria de todos los nodos
+     */
     ~Pila();
+    /**
+     * @brief Apila un elemento en la cima de la pila
+     * @param valor Valor a apilar
+     */
     void apilar (T valor);
+    /**
+     * @brief Desapila y retorna el elemento de la cima
+     * @return Valor desapilado
+     */
     T desapilar ();
+    /**
+     * @brief Verifica si la pila está vacía
+     * @return true si la pila está vacía, false en caso contrario
+     */
     bool es_vacia ();
+    /**
+     * @brief Obtiene el tamaño de la pila
+     * @return Número de elementos en la pila
+     */
     int tamanio();
+    /**
+     * @brief Imprime todos los elementos de la pila
+     */
     void imprimir();
 private:
-    Nodo<T> *cima;
+    Nodo<T> *cima;  ///< Puntero al nodo de la cima
 };
 
 template <typename T>

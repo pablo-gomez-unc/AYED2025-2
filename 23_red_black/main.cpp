@@ -1,23 +1,55 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de árboles rojo-negro
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 
+/**
+ * @enum Color
+ * @brief Enum que representa los colores de los nodos en un árbol rojo-negro
+ */
 enum Color { ROJO, NEGRO };
 
+/**
+ * @struct Nodo
+ * @brief Estructura que representa un nodo en un árbol rojo-negro
+ * @tparam T Tipo de dato almacenado en el nodo
+ */
 template <typename T>
 struct Nodo {
-    T dato;
-    Color color;
-    Nodo<T>* padre;
-    Nodo<T>* izquierda;
-    Nodo<T>* derecha;
+    T dato;              ///< Dato almacenado en el nodo
+    Color color;         ///< Color del nodo (ROJO o NEGRO)
+    Nodo<T>* padre;     ///< Puntero al nodo padre
+    Nodo<T>* izquierda; ///< Puntero al hijo izquierdo
+    Nodo<T>* derecha;   ///< Puntero al hijo derecho
 
+    /**
+     * @brief Constructor del nodo con valor
+     * @param valor Valor a almacenar
+     */
     Nodo(T valor) : dato(valor), color(ROJO), padre(nullptr), izquierda(nullptr), derecha(nullptr) {}
+    /**
+     * @brief Constructor del nodo con color
+     * @param c Color del nodo
+     */
     Nodo(Color c) : color(c), padre(nullptr), izquierda(nullptr), derecha(nullptr) {}
 
+    /**
+     * @brief Verifica si el nodo es nulo
+     * @return true si el nodo es nulo, false en caso contrario
+     */
     bool es_nulo() const {
         return this == nullptr;
     }
 };
 
+/**
+ * @class ArbolRojoNegro
+ * @brief Clase que representa un árbol rojo-negro
+ * @tparam T Tipo de dato almacenado en el árbol
+ */
 template <typename T>
 class ArbolRojoNegro {
 private:

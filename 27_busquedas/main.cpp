@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que compara std::map vs std::unordered_map
+ * @author Roberto Pablo Gomez
+ */
+
 #include <iostream>
 #include <map>
 #include <unordered_map>
@@ -8,6 +14,10 @@
 
 #include "perfomanceutils.hpp"
 
+/**
+ * @brief Función principal del programa
+ * @return 0 si el programa termina correctamente
+ */
 int main () {
     const int NUM_ELEMENTOS = 10000000;
     std::vector<int> claves(NUM_ELEMENTOS);

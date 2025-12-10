@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal que demuestra el uso de árboles de búsqueda binaria
+ * @author Roberto Pablo Gomez
+ */
 
 #include <cstdlib>
 #include <iostream>
@@ -5,14 +10,25 @@
 
 using namespace std;
 
+/**
+ * @class nodo
+ * @brief Clase que representa un nodo en un árbol binario
+ * @tparam T Tipo de dato almacenado en el nodo
+ */
 template <class T> class nodo {
 public:
-    T info;
-    nodo* der, * izq;
+    T info;        ///< Información almacenada en el nodo
+    nodo* der;      ///< Puntero al hijo derecho
+    nodo* izq;     ///< Puntero al hijo izquierdo
 };
 
+/**
+ * @class arbol
+ * @brief Clase que representa un árbol de búsqueda binaria
+ * @tparam T Tipo de dato almacenado en el árbol
+ */
 template <class T> class arbol {
-nodo<T>* raiz;
+nodo<T>* raiz;  ///< Puntero a la raíz del árbol
 void ArbolBusq(T x, nodo<T>*& nuevo);
 void rid(nodo<T>* aux);
 void ird(nodo<T>* aux);
@@ -21,13 +37,39 @@ void getElemOrdenados(nodo<T>* aux, vector<int> &lista);
 void show(nodo<T>* aux, int n);
 
 public:
+    /**
+     * @brief Constructor por defecto
+     */
     arbol() { raiz = NULL; };
+    /**
+     * @brief Destructor
+     */
     ~arbol() {};
+    /**
+     * @brief Crea un árbol de búsqueda binaria
+     * @param x Valor a insertar
+     */
     void CreaArbolBus(T x);
+    /**
+     * @brief Recorrido preorden (RID)
+     */
     void RID() { rid(raiz); }
+    /**
+     * @brief Recorrido inorden (IRD)
+     */
     void IRD() { ird(raiz); }
+    /**
+     * @brief Recorrido postorden (IDR)
+     */
     void IDR() { idr(raiz); }
+    /**
+     * @brief Muestra el árbol de forma visual
+     */
     void VerArbol() { show(raiz, 0); }
+    /**
+     * @brief Obtiene los elementos ordenados
+     * @param vec_ordenado Vector donde se almacenan los elementos ordenados
+     */
     void GetElemOrdenados (vector<int> &vec_ordenado) {getElemOrdenados(raiz, vec_ordenado);}
 };
 
