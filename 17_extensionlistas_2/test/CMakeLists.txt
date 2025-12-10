@@ -1,2 +1,5 @@
 add_executable(17_test_extension_listas test_extension_listas.cpp)
 target_link_libraries(17_test_extension_listas PRIVATE gtest gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(17_test_extension_listas)

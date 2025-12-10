@@ -8,6 +8,8 @@ endif()
 
 set(CMAKE_CXX_STANDARD 20)
 
+include(CTest)
+
 include(FetchContent)
 FetchContent_Declare(
         googletest
